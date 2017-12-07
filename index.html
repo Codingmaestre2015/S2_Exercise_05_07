@@ -88,14 +88,115 @@
 
                         <div class="formRow">
                                 <label for="email">E-mail*</label>
-                                <input type="text" name="custEmail" id="email">
+                                <input type="email" name="custEmail" id="email">
                         </div>
 
+                        <div class="formRow">
+                                <label for="info">Where did you hear about us?<br />(select all that apply)</label>
+                                <select id="info" name="infoSrc" size="5" multiple>
+                                        <option value="internet">Internet</option>
+                                        <option value="mag">Magazine</option>
+                                        <option value="news">Newspaper</option>
+                                        <option value="word">Word of Mouth</option>
+                                        <option value="other">Other</option>
+                                </select>
+                        </div>
+
+                        <!-- data list -->
+                        <div class="formRow">
+                                <label for="dish">What's your favorite dish?</label>
+                                <input type="text" name="favDish" id="dish" list="dishType">
+                                <datalist id="dishType">
+                                        <option value="Antipasto Pizza"></option>
+                                        <option value="Big Kahuna Pizza"></option>
+                                        <option value="BBQ Chicken Pizza"></option>
+                                        <option value="Mediterranean Herb Pizza"></option>
+                                        <option value="Pasta Rolls"></option>
+                                        <option value="Pasto Artichoke Pizza"></option>
+                                </datalist>
+                        </div>
+
+                        <!-- spinner -->
+                        <div class="formRow">
+                                <label for="dineSpin">How many times do you dine out per month?</label>
+                                <input type="number" name="dineOut" id="dineSpin" value="1" step="1" min="0" max="20">
+                        </div>
+
+                        <!-- checkbox -->
+                        <input type="checkbox" name="mailMe" id="mailCB" value="yes">
+                        <label for="mailCB ">Add me to your mailing list for great coupons and specials!</label>
                 </fieldset>
 
                 <fieldset id="expInfo">
                         <legend>Share your experience at Red Ball Pizza</legend>
+
+                        <!-- date widget -->
+                        <div class="formRow">
+                                <label for="visit">Date of Visit</label>
+                                <input type="date" name="visitDate" id="visit">
+                        </div>
+
+
+                        <!-- selection list -->
+                        <div class="formRow">
+                                <label for="order">Order Type</label>
+                                <select id="order" name="orderType">
+                                        <option value="order1">Carry Out</option>
+                                        <option value="order2">Delivery</option>
+                                        <option value="order3" selected>Dine In</option>
+                                        <option value="order4">Take 'n Bake</option>
+                                </select>
+                        </div>
+
+                        <!-- radio buttons -->
+                        <div class="formRow">
+                                <label>Was your service friendly?</label>
+                                <fieldset class="optGroup">
+                                        <label for="fYes">Yes</label>
+                                        <input type="radio" name="sFriend" id="fYes" value="yes">
+                                        <label for="fNo">No</label>
+                                        <input type="radio" name="sFriend" id="fNo" value="no">
+                                </fieldset>
+                        </div>
+
+                        <div class="formRow">
+                                <label>Was you order correct?</label>
+                                <fieldset class="optGroup">
+                                        <label for="cYes">Yes</label>
+                                        <input type="radio" name="oCorrect" id="cYes" value="yes">
+                                        <label for="cNo">No</label>
+                                        <input type="radio" name="oCorrect" id="cNo" value="no">
+                                </fieldset>
+                        </div>
+
+                        <div class="formRow">
+                                <label>Was your food hot?</label>
+                                <fieldset class="optGroup">
+                                        <label for="hYes">Yes</label>
+                                        <input type="radio" name="foodHot" id="hYes" value="yes">
+                                        <label for="hNo">No</label>
+                                        <input type="radio" name="foodHot" id="hNo" value="no">
+                                </fieldset>
+                        </div>
+
+                        <!-- range slider -->
+                        <div class="formRow">
+                                <label for="rangeBox">Rate the overall service<br />(0=poor; 10=great)</label>
+                                0
+                                <input type="range" name="serviceRate" id="rangeBox" value="5" step="1" min="0" max="10">
+                                10
+                        </div>
+
+                        <!-- textbox area -->
+                        <label for="commBox">Tell us more about your experience!</label>
+                        <textarea name="custExp" id="commBox" rows="" cols=""></textarea>
                 </fieldset>
+
+                <!-- buttons -->
+                <div id="buttons">
+                        <input type="submit" value="Submit My Survey">
+                        <input type="reset" value="Cancel">
+                </div>
 
       </form>
 
